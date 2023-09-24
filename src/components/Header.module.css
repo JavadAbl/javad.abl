@@ -1,0 +1,36 @@
+.header_img {
+  width: 100%;
+  border: 0.125rem solid var(--main-color);
+  margin-bottom: 0.75rem;
+  border-radius: 4px;
+}
+.nav_item {
+  list-style-type: none;
+  margin: 1rem;
+}
+
+.nav_item_container a {
+  color: rgb(182, 215, 255);
+  text-transform: uppercase;
+  text-wrap: wrap;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0 0 4px rgb(233, 4, 195);
+}
+
+.header_divider {
+  border: none;
+  border-top: var(--main-color) solid 0.0625rem;
+  margin: 0 1rem;
+}
+
+.nav_item_container img {
+  width: 2rem;
+}
+
+.nav_item_container {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
