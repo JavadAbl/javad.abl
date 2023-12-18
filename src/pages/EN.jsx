@@ -192,9 +192,9 @@ function Section_Projects(params) {
       <div className={styles.section_projects_container}>
         <div className={`${styles.section_projects_col}`}>
           <DetailView
-            title="CoffeeCollege Site"
-            link="https://www.coffeecollege.ir"
-            des="A blog about everything of coffee.            "
+            title="Merngram Social Media App"
+            link="https://merngram.vercel.app"
+            des="A social media application,  Instagram like"
           />
         </div>
         <div className={`${styles.section_projects_col}`}>
