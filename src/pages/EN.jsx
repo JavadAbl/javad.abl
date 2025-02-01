@@ -1,6 +1,22 @@
+import Neonizer from "neonizer";
 import Header from "../components/Header";
 
 import styles from "./EN.module.css";
+import "./moving-neon-text.scss";
+import "../styles/Rainbow-spotlight.css";
+import "../styles/city-nights.css";
+import "../styles/aurora.css";
+import { neonify } from "neontext";
+
+/* neonify({
+  elem: "neonify",
+  shadowBlurRadius: 10,
+  colors: ["red", "green", "purple"],
+  random: true,
+  colorizeText: true,
+  shadowOffsetX: 5,
+  shadowOffsetY: 5,
+}); */
 
 export default function EN() {
   return (
@@ -37,8 +53,24 @@ export default function EN() {
 function Hero(params) {
   return (
     <div className={styles.hero_container}>
-      <h1 className={styles.hero_heading}>Mohammad Javad Abolhassani Far</h1>
-      <span className={styles.hero_title}>A Web Developer</span>
+      <div className={`${styles.hero_text_container}`}>
+        <h1 className={`${styles.hero_heading} neon `}>
+          Mohammad Javad Abolhassani Far
+        </h1>
+
+        <div className=" aurora-content">
+          <h1 className={`${styles.hero_title} aurora-title`}>
+            A Web Developer
+            <div className="aurora">
+              <div className="aurora__item"></div>
+              <div className="aurora__item"></div>
+              <div className="aurora__item"></div>
+              <div className="aurora__item"></div>
+            </div>
+          </h1>
+        </div>
+        {/*  <h2 className={`${styles.hero_title} city-nights`}>A Web Developer</h2> */}
+      </div>
     </div>
   );
 }
@@ -240,7 +272,8 @@ function Section({ title, id, children }) {
     <section id={id}>
       <div className={styles.heading_container}>
         <div className={styles.heading_line} />
-        <h2 className={styles.heading_title}>{title}</h2>
+        {/* <h2 className={styles.heading_title}>{title}</h2> */}
+        <Neonizer className={styles.heading_title}>{title}</Neonizer>
         <div className={styles.heading_line} />
       </div>
       <div className={styles.section_content}>{children}</div>
@@ -307,7 +340,12 @@ function CardView({ title, icon, des }) {
   return (
     <div className={styles.card_container}>
       <img className={styles.card_icon} src={icon} alt={title} />
-      <h3 className={styles.card_title}>{title}</h3>
+
+      {/* <h3 className={styles.card_title}>{title}</h3> */}
+      <h3 className={`Rainbow-spotlight`} data-text={title}>
+        {title}
+      </h3>
+
       <p className={styles.card_des}>{des}</p>
     </div>
   );

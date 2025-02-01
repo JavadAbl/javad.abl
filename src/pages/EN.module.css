@@ -61,13 +61,26 @@ p {
   background-size: cover;
 }
 
-.hero_heading {
-  max-width: 85%;
-  width: max-content;
+.hero_text_container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.hero_heading {
+  /* max-width: 85%; */
+  /* width: max-content;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
   font-size: max(3rem, 5vw);
   text-align: center;
   text-shadow: 0 0 8px black;
@@ -77,17 +90,17 @@ p {
 }
 
 .hero_title {
-  display: none;
+  /*  position: absolute;
   color: rgb(107, 90, 255);
-  position: absolute;
   top: 83%;
   left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
+  transform: translateX(-50%); 
   font-size: max(1.5rem, 2vw);
-  font-weight: 400;
+  width: max-content;
+     font-weight: 400;
   text-transform: capitalize;
   text-shadow: 0 0 16px blue;
+  text-align: center; */
 }
 
 section {
