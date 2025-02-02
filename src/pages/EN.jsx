@@ -1,4 +1,4 @@
-import Neonizer from "neonizer";
+//import Neonizer from "neonizer";
 import Header from "../components/Header";
 
 import styles from "./EN.module.css";
@@ -272,8 +272,8 @@ function Section({ title, id, children }) {
     <section id={id}>
       <div className={styles.heading_container}>
         <div className={styles.heading_line} />
-        {/* <h2 className={styles.heading_title}>{title}</h2> */}
-        <Neonizer className={styles.heading_title}>{title}</Neonizer>
+        <h2 className={styles.heading_title}>{title}</h2>
+        {/* <Neonizer className={styles.heading_title}>{title}</Neonizer> */}
         <div className={styles.heading_line} />
       </div>
       <div className={styles.section_content}>{children}</div>
