@@ -1,4 +1,3 @@
-//import Neonizer from "neonizer";
 import Header from "../components/Header";
 
 import styles from "./EN.module.css";
@@ -7,6 +6,7 @@ import "../styles/Rainbow-spotlight.css";
 import "../styles/city-nights.css";
 import "../styles/aurora.css";
 import { neonify } from "neontext";
+import ColorChangingText from "../components/ColorChangingText";
 
 /* neonify({
   elem: "neonify",
@@ -103,7 +103,7 @@ function Section_Info() {
             <hr className={styles.section_info_dvider} />
             <tr>
               <th className={styles.section_info_th}>Age:</th>
-              <td className={styles.section_info_td}>29</td>
+              <td className={styles.section_info_td}>31</td>
             </tr>
             <hr className={styles.section_info_dvider} />
             <tr>
@@ -166,51 +166,51 @@ function Section_Skills() {
     <Section id="skills" title="skills">
       <div className={styles.section_skills_container}>
         <ProgressBar
-          title={"HTML CSS JS"}
-          progress={90}
-          color="#e0335b"
-          textColor="#000000"
-        />
-        <ProgressBar
           title={"React.js"}
-          progress={90}
+          progress={100}
           color="#45abff"
           textColor="black"
         />
         <ProgressBar
-          title={"C#"}
-          progress={80}
-          color="#ffa41b"
-          textColor="black"
-        />
-        <ProgressBar
-          title={".Net Core WebApi"}
-          progress={75}
-          color="#b44dff"
-          textColor="black"
-        />
-        <ProgressBar
-          title={"MS SQL"}
-          progress={75}
-          color="#dc1947"
-          textColor="black"
-        />
-        <ProgressBar
-          title={"SEO"}
-          progress={50}
-          color="#ecee81"
-          textColor="black"
-        />
-        <ProgressBar
-          title={"Node.js"}
-          progress={45}
+          title={"Nest.js"}
+          progress={100}
           color="#58ffcf"
           textColor="black"
         />
         <ProgressBar
-          title={"Barista Profession"}
-          progress={85}
-          color="#84693d"
+          title={"Express.js"}
+          progress={100}
+          color="#FFF01F"
+          textColor="black"
+        />
+        <ProgressBar
+          title={"Angular"}
+          progress={100}
+          color="#7FFF00"
+          textColor="black"
+        />
+        <ProgressBar
+          title={"ASP.Net Core"}
+          progress={100}
+          color="#b44dff"
+          textColor="black"
+        />
+        <ProgressBar
+          title={"React Native"}
+          progress={100}
+          color="#FF44CC"
+          textColor="black"
+        />
+        <ProgressBar
+          title={"MS SQL"}
+          progress={100}
+          color="#FF3131"
+          textColor="black"
+        />
+        <ProgressBar
+          title={"Processmaker"}
+          progress={100}
+          color="orange"
           textColor="black"
         />
       </div>
@@ -272,8 +272,9 @@ function Section({ title, id, children }) {
     <section id={id}>
       <div className={styles.heading_container}>
         <div className={styles.heading_line} />
-        <h2 className={styles.heading_title}>{title}</h2>
-        {/* <Neonizer className={styles.heading_title}>{title}</Neonizer> */}
+        {/* <h2 className={styles.heading_title}>{title}</h2> */}
+        <ColorChangingText className={styles.heading_title} text={title} />
+
         <div className={styles.heading_line} />
       </div>
       <div className={styles.section_content}>{children}</div>
@@ -281,7 +282,7 @@ function Section({ title, id, children }) {
   );
 }
 
-function ProgressBar({ title, progress, color, textColor }) {
+/* function ProgressBar({ title, progress, color, textColor }) {
   if (progress > 100 || progress < 1) return;
 
   let n50 = 0,
@@ -324,6 +325,7 @@ function ProgressBar({ title, progress, color, textColor }) {
       className={styles.progress_container}
       style={{
         color: textColor,
+        backgroundColor: color,
         height: "1.5rem",
       }}
     >
@@ -332,6 +334,17 @@ function ProgressBar({ title, progress, color, textColor }) {
       {Array.from(Array(n1), (_, k) => n1Div(`n1${k}x${title}`))}
       <span className={styles.progress_title}>{title}</span>
       <span className={styles.progress_percent}>{progress}</span>
+    </div>
+  );
+} */
+
+function ProgressBar({ title, color, textColor }) {
+  return (
+    <div
+      className={styles.progress_container}
+      style={{ backgroundColor: color, color: textColor }}
+    >
+      <span className={styles.progress_title}>{title}</span>
     </div>
   );
 }
