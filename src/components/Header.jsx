@@ -51,19 +51,6 @@ export default function Header() {
           <li className={`${styles.nav_item}`}>
             <div className={`${styles.nav_item_container}`}>
               <a
-                onClick={() => setClicked("projects")}
-                style={clicked === "projects" ? { color: "red" } : {}}
-                href="#projects"
-              >
-                PROJECTS & WORKS
-              </a>
-              <img src="/works.webp" alt="" />
-            </div>
-          </li>
-          <hr className={styles.header_divider} />
-          <li className={`${styles.nav_item}`}>
-            <div className={`${styles.nav_item_container}`}>
-              <a
                 onClick={() => setClicked("edu")}
                 style={clicked === "edu" ? { color: "red" } : {}}
                 href="#edu"
@@ -71,6 +58,19 @@ export default function Header() {
                 EDUCATION
               </a>
               <img src="/edu.webp" alt="" />
+            </div>
+          </li>
+          <hr className={styles.header_divider} />
+          <li className={`${styles.nav_item}`}>
+            <div className={`${styles.nav_item_container}`}>
+              <a
+                onClick={() => setClicked("projects")}
+                style={clicked === "projects" ? { color: "red" } : {}}
+                href="#projects"
+              >
+                PROJECTS & WORKS
+              </a>
+              <img src="/works.webp" alt="" />
             </div>
           </li>
         </ul>

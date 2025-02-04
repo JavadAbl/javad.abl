@@ -37,10 +37,10 @@ export default function EN() {
         <Spacer />
         <Section_Skills />
         <Spacer />
+        <Section_Edu />
+        <Spacer />
         <Section_Projects />
         <Spacer />
-        {/* <Section_Edu />
-        <Spacer /> */}
       </main>
     </div>
   );
@@ -252,13 +252,34 @@ function Section_Edu() {
   return (
     <Section id="edu" title="Educations">
       <div className={styles.section_edu_container}>
+        <div className={styles.edu_card}>
+          <h2 className={styles.edu_title}>{"Bachelor's degree"}</h2>
+          <p className={styles.edu_description}>
+            {"Azad Islamic University, South Tehran Branch"}
+          </p>
+          <p className={styles.edu_sub_description}>
+            {"Computer engineering, software major"}
+          </p>
+        </div>
+
+        <div className={styles.edu_card}>
+          <h2 className={styles.edu_title}>{"Master's degree"}</h2>
+          <p className={styles.edu_description}>
+            {"Payam Noor, North Tehran Branch"}
+          </p>
+          <p className={styles.edu_sub_description}>
+            {"Computer engineering, software major"}
+          </p>
+        </div>
+      </div>
+      {/*  <div className={styles.section_edu_container}>
         <div className={styles.section_edu_col}>
           <DetailView title="کارشناسی ارشد مهندسی کامپیوت" date="" />
         </div>
         <div className={styles.section_edu_col}>
           <DetailView title="dsa" date="" />
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }
