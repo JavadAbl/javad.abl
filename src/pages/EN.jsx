@@ -39,8 +39,8 @@ export default function EN() {
         <Spacer />
         <Section_Edu />
         <Spacer />
-        <Section_Projects />
-        <Spacer />
+        {/* <Section_Projects />
+        <Spacer /> */}
       </main>
     </div>
   );

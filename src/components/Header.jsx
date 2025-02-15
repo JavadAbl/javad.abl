@@ -61,7 +61,7 @@ export default function Header() {
             </div>
           </li>
           <hr className={styles.header_divider} />
-          <li className={`${styles.nav_item}`}>
+          {/* <li className={`${styles.nav_item}`}>
             <div className={`${styles.nav_item_container}`}>
               <a
                 onClick={() => setClicked("projects")}
@@ -72,7 +72,7 @@ export default function Header() {
               </a>
               <img src="/works.webp" alt="" />
             </div>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>
